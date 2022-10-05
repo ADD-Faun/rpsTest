@@ -11,12 +11,11 @@ body {
 
 .heading {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
-.logo {
-    height: 40px;
-    padding-right: 5px;
+#imageCycle {
+    width: 150px;
 }
 
 /* --------- Game layout */
@@ -55,13 +54,18 @@ body {
     margin: 30px auto;
 }
 
-#score {
+#wins {
     color: green;
     font-weight: bold;
 }
 
-#incorrect {
+#loses {
     color: red;
+    font-weight: bold;
+}
+
+#draws {
+    color: orange;
     font-weight: bold;
 }
 
@@ -87,7 +91,7 @@ body {
 /* --------- Buttons */
 
 .btn {
-    width: 220px;
+    width: 140px;
     height: 60px;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
@@ -100,7 +104,6 @@ body {
 }
 
 .btn--big {
-    padding-top: 10px;
     border-radius: 50%;
     background-color: white;
     border: 10px solid;

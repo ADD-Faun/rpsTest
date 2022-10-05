@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
+                imageCycle();
             } 
-             else {
+            else {
                 let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+                
             }
         });
     }
@@ -25,9 +25,36 @@ document.addEventListener("DOMContentLoaded", function() {
 function runGame(gameType) {
 
 	// Creates computers choice
-    let opponentc = Math.floor(Math.random() * 5) + 1;
+    let opponentc = Math.floor(Math.random() * 3) + 1; ;
+    let player1 = gameType
+    
+    setTimeout(() => {  
+        switch (opponentc) {
+        case 1:
+            document.getElementById("oppimage").src="assets/images/rock.png";;
+           break;
+        case 2:
+            document.getElementById("oppimage").src="assets/images/paper.png";;
+           break;
+        case 3:
+            document.getElementById("oppimage").src="assets/images/scissors.png";;
+           break;
+            } 
+        }, 3500);;
 
-
+    setTimeout(() => {  
+        switch (player1) {
+        case "rock":
+            document.getElementById("imageCycle").src="assets/images/rock.png";;
+           break;
+        case "paper":
+            document.getElementById("imageCycle").src="assets/images/paper.png";;
+           break;
+        case "scissors":
+            document.getElementById("imageCycle").src="assets/images/scissors.png";;
+           break;
+            } 
+        }, 3500);;
 
 }
 
@@ -73,8 +100,19 @@ function incrementWrongAnswer() {
     
 }
 
-function RockPaperScissors(opponentc) {
+function imageCycle(){
 
-    
+    document.getElementById("imageCycle").src="assets/images/rock.png";
+    setTimeout(() => { document.getElementById("imageCycle").src="assets/images/paper.png";; }, 1000);
+    setTimeout(() => { document.getElementById("imageCycle").src="assets/images/scissors.png";; }, 2000);
+    setTimeout(() => { document.getElementById("imageCycle").src="assets/images/question.jpeg";; }, 3000);
+
+    document.getElementById("oppimage").src="assets/images/rock.png";
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.png";; }, 1000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.png";; }, 2000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg";; }, 3000);
+
+    runGame(gameType)
+
 }
 
