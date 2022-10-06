@@ -68,13 +68,13 @@ function runGame(gameType , diff) {
     setTimeout(() => {  
         switch (opponentc) {
         case "rock":
-            document.getElementById("oppimage").src="assets/images/rock.png";;
+            document.getElementById("oppimage").src="assets/images/rock.jpg";;
            break;
         case "paper":
-            document.getElementById("oppimage").src="assets/images/paper.png";;
+            document.getElementById("oppimage").src="assets/images/paper.jpg";;
            break;
         case "scissors":
-            document.getElementById("oppimage").src="assets/images/scissors.png";;
+            document.getElementById("oppimage").src="assets/images/scissors.jpg";;
            break;
         case "lizard":
             document.getElementById("oppimage").src="assets/images/lizard.jpg";;
@@ -88,13 +88,13 @@ function runGame(gameType , diff) {
     setTimeout(() => {  
         switch (player1) {
         case "rock":
-            document.getElementById("playerimage").src="assets/images/rock.png";;
+            document.getElementById("playerimage").src="assets/images/rock.jpg";;
            break;
         case "paper":
-            document.getElementById("playerimage").src="assets/images/paper.png";;
+            document.getElementById("playerimage").src="assets/images/paper.jpg";;
            break;
         case "scissors":
-            document.getElementById("playerimage").src="assets/images/scissors.png";;
+            document.getElementById("playerimage").src="assets/images/scissors.jpg";;
            break;
         case "lizard":
             document.getElementById("playerimage").src="assets/images/lizard.jpg";;
@@ -184,15 +184,15 @@ function incrementWrongAnswer() {
 function imageCycle(gameType , diff){
 
     document.getElementById("playerimage").src="assets/images/question.jpeg";
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.png";; }, 1000);
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/paper.png";; }, 2000);
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/scissors.png";; }, 3000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.jpg";; }, 1000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/paper.jpg";; }, 2000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/scissors.jpg";; }, 3000);
     setTimeout(() => { document.getElementById("playerimage").src="assets/images/question.jpeg";; }, 4000);
 
     document.getElementById("oppimage").src="assets/images/question.jpeg";
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/rock.png";; }, 1000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.png";; }, 2000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.png";; }, 3000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/rock.jpg";; }, 1000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.jpg";; }, 2000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.jpg";; }, 3000);
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg";; }, 4000);
 
     runGame(gameType , diff)
