@@ -6,77 +6,158 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                imageCycle();
-            } 
-            else {
+            if (this.getAttribute("data-type") != "submit") {
                 let gameType = this.getAttribute("data-type");
+
                 
-            }
+                if (difficulty.checked) {
+                    console.log(`Checkbox is checked!`)
+                        diff = 5
+                    } else {
+                    console.log(`Checkbox is not checked.`)
+                        diff = 3
+                    }
+                        imageCycle(gameType , diff);
+
+                
+            } 
+
         });
     }
 
 });
 
+const difficulty = document.querySelector('#lizard-spock');
+
+const hid1 = document.getElementById('lizard');
+const hid2 = document.getElementById('spock');
+
+difficulty.addEventListener('change', function() {
+  if (this.checked) {
+    console.log("Checkbox is checked..");
+    hid1.removeAttribute("hidden");
+    hid2.removeAttribute("hidden");
+  } else {
+    console.log("Checkbox is not checked..");
+    hid1.setAttribute("hidden", true);
+    hid2.setAttribute("hidden", true);
+  }
+});
+
+
+
 /**
  * The main game "loop", called when the script is first loaded
  * and after the user's answer has been processed
  */
-function runGame(gameType) {
+function runGame(gameType , diff) {
 
 	// Creates computers choice
-    let opponentc = Math.floor(Math.random() * 3) + 1; ;
-    let player1 = gameType
+
+    var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
+    //if box checked let choices = all 5 things 
+
+
+    opponentc = choices[Math.floor(Math.random() * diff)];
+    player1 = gameType ;
+
+    document.getElementById('playeranswer').textContent = player1;
+    document.getElementById('oppanswer').textContent = opponentc;
     
     setTimeout(() => {  
         switch (opponentc) {
-        case 1:
+        case "rock":
             document.getElementById("oppimage").src="assets/images/rock.png";;
            break;
-        case 2:
+        case "paper":
             document.getElementById("oppimage").src="assets/images/paper.png";;
            break;
-        case 3:
+        case "scissors":
             document.getElementById("oppimage").src="assets/images/scissors.png";;
            break;
+        case "lizard":
+            document.getElementById("oppimage").src="assets/images/lizard.jpg";;
+           break;
+        case "spock":
+            document.getElementById("oppimage").src="assets/images/spock.jpg";;
+           break;
             } 
-        }, 3500);;
+        }, 4500);;
 
     setTimeout(() => {  
         switch (player1) {
         case "rock":
-            document.getElementById("imageCycle").src="assets/images/rock.png";;
+            document.getElementById("playerimage").src="assets/images/rock.png";;
            break;
         case "paper":
-            document.getElementById("imageCycle").src="assets/images/paper.png";;
+            document.getElementById("playerimage").src="assets/images/paper.png";;
            break;
         case "scissors":
-            document.getElementById("imageCycle").src="assets/images/scissors.png";;
+            document.getElementById("playerimage").src="assets/images/scissors.png";;
+           break;
+        case "lizard":
+            document.getElementById("playerimage").src="assets/images/lizard.jpg";;
+           break;
+        case "spock":
+            document.getElementById("playerimage").src="assets/images/spock.jpg";;
            break;
             } 
-        }, 3500);;
+        }, 4500);;
 
+        setTimeout(() => {checkAnswer(player1 , opponentc);; }, 6000);
 }
 
 /**
- * Checks the answer against the first element in
- * the returned calculateCorrectAnswer array
+ * defines the winning answer for each throw 
+ * scores the player 
  */
-function checkAnswer() {
+function checkAnswer(player1 , opponentc) {
 
+        ans1=0;
+        ans2=0;
 
-    if (isCorrect = draw){
-        alert("Draw")
+    switch (opponentc) {
+        case "rock":
+            ans1="paper"; ans2="spock";
+            break;
+        case "paper":
+            ans1="scissors"; ans2="lizard"
+            break;
+        case "scissors":
+            ans1="rock"; ans2="spock"
+            break;
+        case "spock":
+            ans1="paper"; ans2="lizard"
+            break;
+        case "lizard":
+            ans1="rock"; ans2="scissors"
+            break;
     }
-      else if (isCorrect) {
-        alert("Hey! You got it right! :D");
-        incrementScore();
-    } else {
-        alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
-        incrementWrongAnswer();
-    }
 
-    runGame(calculatedAnswer[1]);
+    // changes hidden text to show if working 
+    document.getElementById('ans1').textContent = ans1;
+    document.getElementById('ans2').textContent = ans2;
+
+            if (player1 == ans1 || player1 == ans2) {
+                alert("You Won :D");
+                incrementScore();
+            } else if (player1 === opponentc){
+                alert("Draw");
+                incrementDraw();
+            } else {
+                alert(`Awwww.... you threw ${player1} . If only you'd chosen ${ans1} `);
+                incrementWrongAnswer();
+            }    
+   
+}
+
+
+
+function incrementDraw() {
+
+    let oldScore = parseInt(document.getElementById("draws").innerText);
+    document.getElementById("draws").innerText = ++oldScore;
 
 }
 
@@ -85,8 +166,8 @@ function checkAnswer() {
  */
 function incrementScore() {
 
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById("wins").innerText);
+    document.getElementById("wins").innerText = ++oldScore;
 
 }
 
@@ -95,24 +176,24 @@ function incrementScore() {
  */
 function incrementWrongAnswer() {
 
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById("loses").innerText);
+    document.getElementById("loses").innerText = ++oldScore;
     
 }
 
-function imageCycle(){
+function imageCycle(gameType , diff){
 
-    document.getElementById("imageCycle").src="assets/images/rock.png";
-    setTimeout(() => { document.getElementById("imageCycle").src="assets/images/paper.png";; }, 1000);
-    setTimeout(() => { document.getElementById("imageCycle").src="assets/images/scissors.png";; }, 2000);
-    setTimeout(() => { document.getElementById("imageCycle").src="assets/images/question.jpeg";; }, 3000);
+    document.getElementById("playerimage").src="assets/images/question.jpeg";
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.png";; }, 1000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/paper.png";; }, 2000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/scissors.png";; }, 3000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/question.jpeg";; }, 4000);
 
-    document.getElementById("oppimage").src="assets/images/rock.png";
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.png";; }, 1000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.png";; }, 2000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg";; }, 3000);
+    document.getElementById("oppimage").src="assets/images/question.jpeg";
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/rock.png";; }, 1000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.png";; }, 2000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.png";; }, 3000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg";; }, 4000);
 
-    runGame(gameType)
-
-}
-
+    runGame(gameType , diff)
+    }

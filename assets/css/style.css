@@ -166,16 +166,15 @@ body {
     color: white;
 }
 
-.btn--gray {
-    margin-top: 25px;
-    background-color: #445361;
-    border: 1px transparent;
-    border-radius: 20px;
+.btn--gold {
+    border-color:gold;
+    color: gold;
 }
 
-.btn--gray:active,
-.btn--gray:hover {
-    background-color: #0d1013;
+.btn--gold:active,
+.btn--gold:hover {
+    background-color: goldenrod;
+    color: white;
 }
 
 /* --------- Media queries */

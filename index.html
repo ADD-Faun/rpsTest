@@ -18,9 +18,17 @@
     <h1 class="heading">
         <img src="assets/images/logo.png" alt="logo" width="150px" > Rock Paper Scissors.   Lizard Spoke ??
     </h1>
-
+    <div><input type="checkbox" id="lizard-spock" name="lizard-spock" value="difficulty"></div>
     <div class="game-area">
+        <div class="question-area">
+            <img id="playerimage" src="assets/images/question.jpeg" alt="question mark" width="150px">
+            <span id="operator">Vs</span>
+            <img id="oppimage" src="assets/images/question.jpeg" alt="question mark" width="150px">
+            <p class="answer-message">Enter Answer:</p>
+        </div>
+        
         <div class="controls-area">
+        
             <button data-type="rock">
                 <img class="btn btn--big btn--green" src="assets/images/rock.png" width="140px" height="140" alt="Rock">
             </button>
@@ -29,16 +37,20 @@
             </button>
             <button data-type="scissors">
                 <img class="btn btn--big btn--orange" src="assets/images/scissors.png" width="140px" height="140" alt="Scissors">
-            </button>        
+            </button> 
+            
+            <button hidden id="lizard" data-type="lizard">
+                <img class="btn btn--big btn--gold" src="assets/images/lizard-hand.jpg" width="140px" height="140" alt="Rock">
+            </button>
+            <button hidden id="spock" data-type="spock">
+                <img class="btn btn--big btn--gold" src="assets/images/spock-hand.jpg" width="140px" height="140" alt="Rock">
+            </button>
         </div>
-        <div class="question-area">
-            <img id="imageCycle" src="assets/images/question.jpeg" alt="question mark" width="150px">
-            <span id="operator">Vs</span>
-            <img id="oppimage" src="assets/images/question.jpeg" alt="question mark" width="150px">
-            <p class="answer-message">Enter Answer:</p>
-
-        </div>
-        <button data-type="submit" class="btn btn--gray">Submit Answer</button>
+        <p id="oppanswer">0</p>
+        <p id="playeranswer">0</p>
+        <p id="ans1">0</p>
+        <p id="ans2">0</p>
+        
     </div>
 
     <div class="score-area">
