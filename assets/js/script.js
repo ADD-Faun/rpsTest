@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") != "submit") {
                 let gameType = this.getAttribute("data-type");
-
                 
                 if (difficulty.checked) {
                     console.log(`Checkbox is checked!`)
@@ -18,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         diff = 3
                     }
                         imageCycle(gameType , diff);
-
                 
             } 
 
         });
+        removeEventListener("click")
     }
 
 });

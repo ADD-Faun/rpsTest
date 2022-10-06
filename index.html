@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div class="wrapper">
     <h1 class="heading">
         <img src="assets/images/logo.png" alt="logo" width="150px" > Rock Paper Scissors.   Lizard Spoke ??
     </h1>
@@ -27,39 +28,43 @@
             <p class="answer-message">Enter Answer:</p>
         </div>
         
-        <div class="controls-area">
-        
-            <button data-type="rock">
-                <img class="btn btn--big btn--green" src="assets/images/rock.jpg" width="140px" height="140" alt="Rock">
-            </button>
-            <button data-type="paper">
-                <img class="btn btn--big btn--blue" src="assets/images/paper.jpg" width="140px" height="140" alt="Paper">
-            </button>
-            <button data-type="scissors">
-                <img class="btn btn--big btn--orange" src="assets/images/scissors.jpg" width="140px" height="140" alt="Scissors">
-            </button> 
-            
-            <button hidden id="lizard" data-type="lizard">
-                <img class="btn btn--big btn--gold" src="assets/images/lizard.jpg" width="140px" height="140" alt="Rock">
-            </button>
-            <button hidden id="spock" data-type="spock">
-                <img class="btn btn--big btn--gold" src="assets/images/spock.jpg" width="140px" height="140" alt="Rock">
-            </button>
+        <div class="score-area">
+            <p class="scores">Wins<span id="wins">0</span></p>
+            <p class="scores">Draw<span id="draws">0</span></p>
+            <p class="scores">Loses<span id="loses">0</span></p>
         </div>
-        <p id="oppanswer">0</p>
-        <p id="playeranswer">0</p>
-        <p id="ans1">0</p>
-        <p id="ans2">0</p>
-        
+
+
+        <p hidden id="oppanswer">0</p>
+        <p hidden id="playeranswer">0</p>
+        <p hidden id="ans1">0</p>
+        <p hidden id="ans2">0</p>
     </div>
 
-    <div class="score-area">
-        <p class="scores">Wins<span id="wins">0</span></p>
-        <p class="scores">Draw<span id="draws">0</span></p>
-        <p class="scores">Loses<span id="loses">0</span></p>
+    <div class="controls-area">
+
+        <button hidden id="lizard" data-type="lizard">
+            <img class="btn btn--big btn--gold" src="assets/images/lizard.jpg" width="140px" height="140" alt="Rock">
+        </button>
+        
+        <button data-type="rock">
+            <img class="btn btn--big btn--green" src="assets/images/rock.jpg" width="140px" height="140" alt="Rock">
+        </button>
+        <button data-type="paper">
+            <img class="btn btn--big btn--blue" src="assets/images/paper.jpg" width="140px" height="140" alt="Paper">
+        </button>
+        <button data-type="scissors">
+            <img class="btn btn--big btn--orange" src="assets/images/scissors.jpg" width="140px" height="140" alt="Scissors">
+        </button> 
+        
+
+        <button hidden id="spock" data-type="spock">
+            <img class="btn btn--big btn--gold" src="assets/images/spock.jpg" width="140px" height="140" alt="Rock">
+        </button>
     </div>
 
     <script src="assets/js/script.js"></script>
+  </div>
 </body>
 
 </html>
