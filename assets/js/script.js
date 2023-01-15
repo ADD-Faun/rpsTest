@@ -10,7 +10,8 @@ function ready() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            test();
+            let selected = this.getAttribute("data-type")
+            selection(selected);
 
         })
 }
@@ -19,6 +20,27 @@ function ready() {
 function test() {
     alert("Test success");
 }
+
+function selection(selected) {
+
+    if (selected != "submit") {
+        let gameType = selected;
+        
+        if (difficulty.checked) {
+            console.log(`Checkbox is checked!`)
+                diff = 5
+            } 
+        else {
+            console.log(`Checkbox is not checked.`)
+                diff = 3
+            }
+        
+        imageCycle(gameType, diff);
+        
+    } 
+
+}
+
 
 const difficulty = document.querySelector('#lizard-spock');
 
