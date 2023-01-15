@@ -140,10 +140,6 @@ body {
     display: flex;
 }
 
-.btn:focus {
-    outline: none;
-}
-
 .btn--big {
     border-radius: 50%;
     background-color: white;
@@ -168,21 +164,9 @@ body {
     color: blue;
 }
 
-.btn--blue:active,
-.btn--blue:hover {
-    background-color: darkblue;
-    color: white;
-}
-
 .btn--orange {
     border-color: orange;
     color: orange;
-}
-
-.btn--orange:active,
-.btn--orange:hover {
-    background-color: darkorange;
-    color: white;
 }
 
 .btn--red {
@@ -190,21 +174,9 @@ body {
     color: red;
 }
 
-.btn--red:active,
-.btn--red:hover {
-    background-color: darkred;
-    color: white;
-}
-
 .btn--green {
     border-color: green;
     color: green;
-}
-
-.btn--green:active,
-.btn--green:hover {
-    background-color: darkgreen;
-    color: white;
 }
 
 .btn--gold {
@@ -212,10 +184,12 @@ body {
     color: gold;
 }
 
-.btn--gold:active,
-.btn--gold:hover {
-    background-color: goldenrod;
-    color: white;
+.button {
+    border-radius: 30%;
+    background-color: none;
+}
+.button:hover {
+    background-color: cyan;
 }
 
 /* --------- Media queries */
