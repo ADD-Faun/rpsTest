@@ -12,13 +12,35 @@ function ready() {
         button.addEventListener("click", function() {
             let selected = this.getAttribute("data-type")
             selection(selected);
-
+            disableButtons();
         })
-}
-}
+}}
             
 function test() {
     alert("Test success");
+}
+
+/**
+ * disables buttons to prevent multiple clicks running game multiple times
+ */
+function disableButtons() {
+    let buttons = document.getElementsByTagName("button")
+
+    for (let button of buttons) {
+        button.disabled = true;
+    };
+}
+
+/**
+ * enables the buttons so the game can be played again
+ */
+function enableButtons() {
+    let buttons = document.getElementsByTagName("button")
+
+    for (let button of buttons) {
+        button.disabled = false;
+    };
+
 }
 
 function selection(selected) {
@@ -36,9 +58,7 @@ function selection(selected) {
             }
         
         imageCycle(gameType, diff);
-        
-    } 
-
+    }    
 }
 
 
@@ -120,7 +140,7 @@ function runGame(gameType , diff) {
             } 
         }, 4500);;
 
-        setTimeout(() => {checkAnswer(player1 , opponentc);; }, 6000);
+    setTimeout(() => {checkAnswer(player1 , opponentc);; }, 6000);;
 }
 
 /**
@@ -131,6 +151,8 @@ function checkAnswer(player1 , opponentc) {
 
         ans1=0;
         ans2=0;
+
+    enableButtons();
 
     switch (opponentc) {
         case "rock":
