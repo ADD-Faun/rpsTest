@@ -19,7 +19,7 @@
     <h1 class="heading">
         <img src="assets/images/logo.png" alt="logo" width="150" > Rock Paper Scissors.   Lizard Spoke ??
     </h1>
-    <div><input type="checkbox" id="lizard-spock" name="lizard-spock" value="difficulty"></div>
+
     <div class="game-area">
         <div class="question-area">
             <img id="playerimage" src="assets/images/question.jpeg" alt="question mark" width="150">
@@ -32,6 +32,15 @@
             <p class="scores">Wins<span id="wins">0</span></p>
             <p class="scores">Draw<span id="draws">0</span></p>
             <p class="scores">Loses<span id="loses">0</span></p>
+        </div>
+
+        <div>
+            <p>Select your choice of Rock, Paper or scissors by clicking the image below</p>
+            <p>You can also choose Lizard or Spock if you check the box below</p>
+        </div>
+        <br>
+        <div><input type="checkbox" id="lizard-spock" name="lizard-spock" value="difficulty">
+            Check this box to add lizard & spock to options
         </div>
 
 
@@ -50,13 +59,14 @@
         <button data-type="rock">
             <img class="btn btn--big btn--green" src="assets/images/rock.jpg" width="140" height="140" alt="Rock">
         </button>
+
         <button data-type="paper">
             <img class="btn btn--big btn--blue" src="assets/images/paper.jpg" width="140" height="140" alt="Paper">
         </button>
+
         <button data-type="scissors">
             <img class="btn btn--big btn--orange" src="assets/images/scissors.jpg" width="140" height="140" alt="Scissors">
         </button> 
-        
 
         <button hidden id="spock" data-type="spock">
             <img class="btn btn--big btn--gold" src="assets/images/spock.jpg" width="140" height="140" alt="Spocks hand symbol">
