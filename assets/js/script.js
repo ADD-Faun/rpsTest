@@ -2,29 +2,23 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    ready()
+});
+
+function ready() {
+    let buttons = document.getElementsByTagName("button")
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") != "submit") {
-                let gameType = this.getAttribute("data-type");
-                
-                if (difficulty.checked) {
-                    console.log(`Checkbox is checked!`)
-                        diff = 5
-                    } else {
-                    console.log(`Checkbox is not checked.`)
-                        diff = 3
-                    }
-                        imageCycle(gameType , diff);
-                
-            } 
+            test();
 
-        });
-        removeEventListener("click")
-    }
-
-});
+        })
+}
+}
+            
+function test() {
+    alert("Test success");
+}
 
 const difficulty = document.querySelector('#lizard-spock');
 
