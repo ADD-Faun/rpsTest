@@ -147,11 +147,18 @@ body {
 .button {
     border-radius: 30%;
 }
+
 .button:hover {
     background-color: cyan;
 }
 
 /* --------- Media queries */
+
+@media (max-width: 550px){
+    #instruction-area {
+        font-size: 1rem;
+    }
+}
 
 @media (max-width: 414px) {
     .controls-area {
