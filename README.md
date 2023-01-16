@@ -72,6 +72,8 @@ Its aim for 'Rock Paper scissors. Lizard Spock?' is
   - Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.
   - Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received.
 
+------
+
 ## Deployment
 
 Rock Paper scissors. Lizard Spock? was deployed using github pages. 
@@ -83,6 +85,16 @@ Rock Paper scissors. Lizard Spock? was deployed using github pages.
   - Main branch was chosen and saved, page refreshed with a working link to indicate the successful deployment. 
 
 The live link can be found here - https://add-faun.github.io/rpsTest/
+
+### Content 
+
+- The icons in the header were taken from [Font Awesome](https://fontawesome.com/)
+
+### Media
+
+- The photos used for the choices were taken by me.
+- The image used for mystery in game-area were taken from open source site xxxxx
+
 
 **Anything more?**
 
