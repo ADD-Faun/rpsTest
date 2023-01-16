@@ -10,7 +10,7 @@ from work to clear their minds. It could also be used to decide insignificant ch
 seeing who can beat the computer three times first or who gets the best score out of three
  
 
-![Responsice Mockup](assets/images/responsiveness-readme.jpg)
+![Responsice Mockup](assets/images/responsive-mockup-readme.png)
 
 ## Features 
 
@@ -21,7 +21,8 @@ seeing who can beat the computer three times first or who gets the best score ou
   - Displays images to show the user and computer choices.
   - Cycles through images of rock, paper and scissors to imitate what people say when they play in real life.
   - Images are cycled through with a final question mark image for suspence before showing the choices.
-  - Player & computer choices are displayed and an alert tells the if they won, lost or drew.
+  Cycle speed was set so the user sees each image but does not get board.
+  - Player & computer choices are displayed and an alert tells them if they won, lost or drew.
   - Alert tells them what choices they made and if they lost tells them which choice could of won.
 
 ![Alert Game Area](assets/images/alert-game-area-readme.png)
@@ -31,7 +32,7 @@ seeing who can beat the computer three times first or who gets the best score ou
 - __Game text__
     - Text starts as "What will you choose?" to make the game seem more personable.
     - This text changes when players have selected a choice to indicate they have successfully made a choice.
-    It changes to "you have chosen:" and says the choice they made.
+    It changes to "you have chosen:" and says the choice they made. Changes like this help keep users ingaged
     - Text changes at the end of the turn to indicate it is over by telling the player they either won, lost 
     or drew and telling them the choice they had made.
 
@@ -137,4 +138,5 @@ The live link can be found here - https://add-faun.github.io/rpsTest/
 
 - The photos used for the choices were taken by me.
 - The image used for mystery in game-area were taken from open source site [pexel] (https://www.pexels.com/photo/question-mark-on-chalk-board-356079/)
-
+- The image used for the lizard hand was purchased from [istock] (https://www.istockphoto.com/photo/monsters-hand-breaks-through-the-paper-gm1131998391-299916606)
+- The image used for the spock hand symbol was purchased from [istock]  (https://www.istockphoto.com/vector/vulcan-salute-gesture-isolated-vector-illustration-gm1222744412-358904400)
