@@ -28,17 +28,21 @@ Its aim for 'Rock Paper scissors. Lizard Spock?' is
     - Text changes at the end of the turn to indicate it is over by telling the player they either won, lost 
     or drew and telling them the choice they had made.
 
-![Nav Bar](assets/images/navigation-mock-up.png)
+![start-message](assets/images/message-start-readme.png) ![choice-message](assets/images/message-choice-readme.png) ![result-message](assets/images/message-result-readme.png)
 
 - __Score__
     - The wins, loses and draws of the player are tracked & displayed here for players enjoyment
     - Wins, loses and draws are coloured green, red and orange respectively so player can easily see which
     is good, bad and neutral.
 
+![score](assets/images/score-readme.png)
+
 - __Instructions__
     - Instructions for how to play are displayed to help users interact with the page.
     - A checkbox is used to add additional choices or lizard and spock. This gives players the choice of 
     playing the simple game or a questionably more difficult version.
+
+![instructions](assets/images/instructions-readme.png)
 
 - __Controls__
     - Each choices can be selected by clicking images of that option. This is more enjoyable than selecting 
@@ -49,6 +53,15 @@ Its aim for 'Rock Paper scissors. Lizard Spock?' is
     as buttons to be clicked.
     - Controls disable to stop multiple inputs during turn.
     - Choices for lizard and spock are hidden when not viable to prevent confusion 
+
+### Future Features
+
+- __Resizing__
+    - Currently fits on all screen sizes. In future will increase size on bigger screens to fill space
+
+- __2 player__
+    - A feature to play against a friend or stranger instead of the computer. online or on the same page.
+    Player could also play against themselfs.
 
 ------
 

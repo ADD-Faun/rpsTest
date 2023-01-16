@@ -16,6 +16,8 @@ html, body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .page-header, .page-footer {
     flex-grow: 0;
@@ -58,7 +60,6 @@ body {
     box-sizing: border-box;
     width: 85%;
     height: fit-content;
-    
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
@@ -68,15 +69,15 @@ body {
 }
 
 #instruction-area {
-    width: 90%;
+    width: fit-content;
     font-size: 1rem;
-    margin: auto;
+    margin: 5px auto;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    background-color:inherit;
+    background-color:#E6ECF0;
     flex-wrap: wrap;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 .score-area {
