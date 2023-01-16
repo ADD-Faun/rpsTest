@@ -20,6 +20,10 @@ Its aim for 'Rock Paper scissors. Lizard Spock?' is
   - Images are cycled through with a final question mark image for suspence before showing the choices.
   - Player & computer choices are displayed and an alert tells the if they won, lost or drew.
   - Alert tells them what choices they made and if they lost tells them which choice could of won.
+
+![Alert Game Area](assets/images/alert-game-area-readme.png)
+----
+![Start Game Area](assets/images/start-game-area-readme.png) ![cycle Game Area](assets/images/cycle-game-area-readme.png) ![result Game Area](assets/images/result-game-area-readme.png)
   
 - __Game text__
     - Text starts as "What will you choose?" to make the game seem more personable.
@@ -53,6 +57,8 @@ Its aim for 'Rock Paper scissors. Lizard Spock?' is
     as buttons to be clicked.
     - Controls disable to stop multiple inputs during turn.
     - Choices for lizard and spock are hidden when not viable to prevent confusion 
+
+![Basic Choices](assets/images/basic-choices-readme.png) ![All Choices](assets/images/all-choices-readme.png)
 
 ### Future Features
 
@@ -106,13 +112,5 @@ The live link can be found here - https://add-faun.github.io/rpsTest/
 ### Media
 
 - The photos used for the choices were taken by me.
-- The image used for mystery in game-area were taken from open source site xxxxx
+- The image used for mystery in game-area were taken from open source site [pexel] (https://www.pexels.com/photo/question-mark-on-chalk-board-356079/)
 
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
