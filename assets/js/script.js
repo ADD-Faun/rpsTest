@@ -3,7 +3,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     ready();
-    console.log('listening');
+    options();
+    console.log('Ready');
 });
 
 /**
@@ -13,8 +14,7 @@ function ready() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        let selected = this.getAttribute("data-type");
-        button.addEventListener("click", selection(selected));
+        button.addEventListener("click", selection);
     }
 }
 
@@ -42,14 +42,16 @@ function enableButtons() {
 
 /**
  * defines parameters for computer choices and stops further user input
+ * then begins game loop
  */
 function selection() {
     disableButtons();
+    let gameType = this.getAttribute("data-type");
+    console.log(gameType)
 
-    let gameType = selected;
     var diff = 3;
         
-    if (difficulty.checked) {
+    if ('#lizard-spock'.checked) {
         console.log(`Checkbox is checked!`);
             diff = 5;
         } 
@@ -61,31 +63,34 @@ function selection() {
     imageCycle(gameType, diff);
 }
 
+/**
+ * Starts event listener for options checkbox, hides &  
+ * unhides options based on checkbox state
+ */
+function options() {
+    let difficulty = document.querySelector('#lizard-spock');
+    const hid1 = document.getElementById('lizard');
+    const hid2 = document.getElementById('spock');
 
-const difficulty = document.querySelector('#lizard-spock');
-
-const hid1 = document.getElementById('lizard');
-const hid2 = document.getElementById('spock');
-
-difficulty.addEventListener('change', function() {
-    if (this.checked) {
-        console.log("Checkbox is checked..");
-        hid1.removeAttribute("hidden");
-        hid2.removeAttribute("hidden");
-    } else {
-        console.log("Checkbox is not checked..");
-        hid1.setAttribute("hidden", true);
-        hid2.setAttribute("hidden", true);
-    }
-});
-
-
+    difficulty.addEventListener('change', function() {
+        if (this.checked) {
+            console.log("Checkbox is checked..");
+            hid1.removeAttribute("hidden");
+            hid2.removeAttribute("hidden");
+        } 
+        else {
+            console.log("Checkbox is not checked..");
+            hid1.setAttribute("hidden", true);
+            hid2.setAttribute("hidden", true);
+        }
+    });
+}
 
 /**
  * The main game "loop", called when the script is first loaded
  * and after the user's answer has been processed
  */
-function runGame(gameType , diff) {
+function runGame(gameType, diff) {
 
 	// Creates computers choice
 
@@ -94,7 +99,7 @@ function runGame(gameType , diff) {
     //if box checked let choices = all 5 things 
 
     var opponentc = choices[Math.floor(Math.random() * diff)];
-    var player1 = gameType ;
+    var player1 = gameType;
 
     document.getElementById('playeranswer').textContent = player1;
     document.getElementById('oppanswer').textContent = opponentc;
@@ -146,7 +151,7 @@ function runGame(gameType , diff) {
  * defines the winning answer for each throw 
  * scores the player 
  */
-function checkAnswer(player1 , opponentc) {
+function checkAnswer(player1, opponentc) {
 
     var ans1=0;
     var ans2=0;
@@ -219,7 +224,7 @@ function incrementWrongAnswer() {
     document.getElementById("message").innerText = ("You lost using:");
 }
 
-function imageCycle(gameType , diff){
+function imageCycle(gameType,diff) {
 
     document.getElementById("message").innerText = ("You have chosen:");
     document.getElementById("message-selection").innerText = (gameType);
@@ -237,5 +242,5 @@ function imageCycle(gameType , diff){
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.jpg"; }, 3000);
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg"; }, 4000);
 
-    runGame(gameType , diff);
+    runGame(gameType, diff)
 }
