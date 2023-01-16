@@ -134,7 +134,7 @@ body {
     display: flex;
 }
 
-.btn--big {
+.btn-big {
     border-radius: 50%;
     background-color: white;
     border: 10px solid;
@@ -145,7 +145,7 @@ body {
     transition: all 0.5s;
 }
 
-.btn--big::after{
+.btn-big::after{
     content: attr(data-type);
     font-size: 1rem;
     color: #445361;
@@ -153,27 +153,27 @@ body {
     left: -0.5em;
 }
 
-.btn--blue {
+.btn-blue {
     border-color: blue;
     color: blue;
 }
 
-.btn--orange {
+.btn-orange {
     border-color: orange;
     color: orange;
 }
 
-.btn--red {
+.btn-red {
     border-color: red;
     color: red;
 }
 
-.btn--green {
+.btn-green {
     border-color: green;
     color: green;
 }
 
-.btn--gold {
+.btn-gold {
     border-color:gold;
     color: gold;
 }
@@ -197,7 +197,7 @@ body {
         padding-bottom: 10px;
     }
 
-    .btn--big {
+    .btn-big {
         margin: 0 10px;
         padding: 5px;
         border: 5px solid;
@@ -206,12 +206,12 @@ body {
         font-size: 1.5rem;
     }
 
-    .btn--big::after {
+    .btn-big::after {
         font-size: 0.6rem;
         left: -0.7rem;
     }
 
-    .btn--gray {
+    .btn-gray {
         margin-top: 0;
     }
 
@@ -237,7 +237,7 @@ body {
         margin: 10px auto;
     }
 
-    .btn--big {
+    .btn-big {
         margin: 10px 10px;
     }
 
