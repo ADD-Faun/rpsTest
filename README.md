@@ -78,6 +78,23 @@ seeing who can beat the computer three times first or who gets the best score ou
 
 ------
 
+## Testing 
+
+Testing was done by using chromes inspect feature, loading the website on different devices.
+
+Testing for different screen sizes was done using chromes inspect feature and by loading the website on different devices.
+Very big screens were found to feel empty so images were set to become larger using media query. 
+
+All clickable items work at different screen sizes and on different devices.
+  - Checkbox reveals additional choices and they are used by the computer.
+  - Each choice button works and produces the correct response.
+
+Users were able to click buttons repeatedly causing the game to run several times at the same time.
+This was fixed by having the on click function also disable all the buttons. 
+
+Buttons did not become undisabled for the next turn.
+This was fixed by setting the undisable function to run when the alert message was shown.
+
 ### Validator Testing 
 
 - HTML
