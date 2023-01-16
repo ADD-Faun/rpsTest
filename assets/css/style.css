@@ -67,21 +67,16 @@ body {
     
 }
 
-.question-area {
-    width: 50%;
-    font-size: 1.5rem;
+#instruction-area {
+    width: 90%;
+    font-size: 1rem;
     margin: auto;
-    padding: 50px 0;
-    display:flex;
+    display: flex;
+    flex-direction: column;
     justify-content:space-evenly;
     background-color:inherit;
     flex-wrap: wrap;
     padding-bottom: 10px;
-}
-
-.question-area span {
-    padding: 0 15px;
-    font-size: 2rem;
 }
 
 .score-area {
@@ -118,15 +113,6 @@ body {
 #message-selection {
     display: inline;
     color: black;
-}
-
-#answer-box {
-    border: none;
-    color: #445361;
-    display: inline-block;
-    height: 40px;
-    width: 80px;
-    font-size: 1.2rem;
 }
 
 .scores {
@@ -223,23 +209,6 @@ body {
         left: -0.7rem;
     }
 
-    .question-area {
-        padding: 10% 0;
-        width: 100%;
-    }
-
-    .question-area span {
-        padding: 0;
-    }
-
-    .answer-message {
-        display: block;
-    }
-
-    #answer-box {
-        display: block;
-        margin: 0 auto;
-    }
     .btn--gray {
         margin-top: 0;
     }
@@ -268,9 +237,6 @@ body {
 
     .btn--big {
         margin: 10px 10px;
-    }
-    .question-area {
-        padding: 10px 0;
     }
 
 }
