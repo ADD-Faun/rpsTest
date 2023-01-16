@@ -3,6 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     ready()
+    console.log('listening')
 });
 
 function ready() {
@@ -92,7 +93,6 @@ function runGame(gameType , diff) {
     var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
     //if box checked let choices = all 5 things 
-
 
     opponentc = choices[Math.floor(Math.random() * diff)];
     player1 = gameType ;

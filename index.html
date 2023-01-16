@@ -21,12 +21,16 @@
     </h1>
 
     <div class="game-area">
-        <div class="question-area">
-            <img id="playerimage" src="assets/images/question.jpeg" alt="question mark" width="150">
-            <span id="operator">Vs</span>
-            <img id="oppimage" src="assets/images/question.jpeg" alt="question mark" width="150">
-            <p id="message">What will you choose?</p>
-            <p id="message-selection"></p>
+        <div>
+            <div>
+                <img id="playerimage" src="assets/images/question.jpeg" alt="question mark" width="150">
+                <span id="operator">Vs</span>
+                <img id="oppimage" src="assets/images/question.jpeg" alt="question mark" width="150">
+            </div>
+            <div>
+                <p id="message">What will you choose?</p>
+                <p id="message-selection"></p>
+            </div>
         </div>
         
         <div class="score-area">
@@ -35,20 +39,18 @@
             <p class="scores">Loses<span id="loses">0</span></p>
         </div>
 
-        <div>
-            <p>Select your choice of Rock, Paper or scissors by clicking the image below</p>
-            <p>You can also choose Lizard or Spock if you check the box below</p>
-        </div>
-        
-        <div><input type="checkbox" id="lizard-spock" name="lizard-spock" value="difficulty">
-            Check this box to add lizard & spock to options
-        </div>
-
-
         <p hidden id="oppanswer">0</p>
         <p hidden id="playeranswer">0</p>
         <p hidden id="ans1">0</p>
         <p hidden id="ans2">0</p>
+    </div>
+
+    <div>
+        <p>Select your choice of Rock, Paper or scissors by clicking the image below</p>
+        <p>You can also choose Lizard or Spock if you check the box below</p>
+    
+        <input type="checkbox" id="lizard-spock" name="lizard-spock" value="difficulty">
+        <label for="lizard-spock">Check this box to add lizard & spock to options</label>
     </div>
 
     <div class="controls-area">
