@@ -63,6 +63,22 @@ and be notified of changes.
     - Controls disable to stop multiple inputs during turn.
     - Choices for lizard and spock are hidden when not viable to prevent confusion 
 
+------
+
+### Validator Testing 
+
+- HTML
+  - Image height & width has units. Units removed.
+   No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadd-faun.github.io%2FrpsTest%2F)
+- CSS
+  - background-color none is not a background-color. Removed.
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fadd-faun.github.io%2FrpsTest%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+### Unfixed Bugs
+
+  - Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.
+  - Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received.
+
 **Anything more?**
 
 Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
