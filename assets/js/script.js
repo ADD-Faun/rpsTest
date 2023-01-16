@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('listening');
 });
 
+/**
+ * Sets event listener for the buttons for player choices
+ */
 function ready() {
     let buttons = document.getElementsByTagName("button");
 
@@ -37,7 +40,10 @@ function enableButtons() {
     }
 }
 
-function selection(selected) {
+/**
+ * defines parameters for computer choices and stops further user input
+ */
+function selection() {
     disableButtons();
 
     let gameType = selected;
