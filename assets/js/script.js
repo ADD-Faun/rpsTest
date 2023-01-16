@@ -65,15 +65,15 @@ const hid1 = document.getElementById('lizard');
 const hid2 = document.getElementById('spock');
 
 difficulty.addEventListener('change', function() {
-  if (this.checked) {
-    console.log("Checkbox is checked..");
-    hid1.removeAttribute("hidden");
-    hid2.removeAttribute("hidden");
-  } else {
-    console.log("Checkbox is not checked..");
-    hid1.setAttribute("hidden", true);
-    hid2.setAttribute("hidden", true);
-  }
+    if (this.checked) {
+        console.log("Checkbox is checked..");
+        hid1.removeAttribute("hidden");
+        hid2.removeAttribute("hidden");
+    } else {
+        console.log("Checkbox is not checked..");
+        hid1.setAttribute("hidden", true);
+        hid2.setAttribute("hidden", true);
+    }
 });
 
 
@@ -145,8 +145,8 @@ function runGame(gameType , diff) {
  */
 function checkAnswer(player1 , opponentc) {
 
-        var ans1=0;
-        var ans2=0;
+    var ans1=0;
+    var ans2=0;
 
     enableButtons();
     document.getElementById("message").innerText = ("Last turn you chose:");
@@ -173,16 +173,19 @@ function checkAnswer(player1 , opponentc) {
     document.getElementById('ans1').textContent = ans1;
     document.getElementById('ans2').textContent = ans2;
 
-            if (player1 == ans1 || player1 == ans2) {
-                alert("You Won :D");
-                incrementScore();
-            } else if (player1 === opponentc){
-                alert("Draw");
-                incrementDraw();
-            } else {
-                alert(`Awwww.... you threw ${player1} . If only you'd chosen ${ans1} `);
-                incrementWrongAnswer();
-            }    
+    if (player1 == ans1 || player1 == ans2) {
+        alert("You Won :D");
+        incrementScore();
+    } 
+    else if (player1 === opponentc){
+        alert("Draw");
+        incrementDraw();
+    } 
+    else {
+    alert(`Awwww.... you threw ${player1} . If only you'd chosen ${ans1} `);
+    incrementWrongAnswer();
+    }
+    console.log('Round complete');
 
 }
 
@@ -237,4 +240,4 @@ function imageCycle(gameType , diff){
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg"; }, 4000);
 
     runGame(gameType , diff);
-    }
+}
