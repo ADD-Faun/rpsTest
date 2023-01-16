@@ -10,12 +10,10 @@ function ready() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function() {
-            let selected = this.getAttribute("data-type");
-            selection(selected);
-            disableButtons();
-        });
-}}
+        let selected = this.getAttribute("data-type");
+        button.addEventListener("click", selection(selected));
+    }
+}
 
 /**
  * disables buttons to prevent multiple clicks running game multiple times
@@ -37,10 +35,10 @@ function enableButtons() {
     for (let button of buttons) {
         button.disabled = false;
     }
-
 }
 
 function selection(selected) {
+    disableButtons();
 
     let gameType = selected;
     var diff = 3;
@@ -55,7 +53,6 @@ function selection(selected) {
         }
         
     imageCycle(gameType, diff);
-    
 }
 
 
@@ -186,9 +183,7 @@ function checkAnswer(player1 , opponentc) {
     incrementWrongAnswer();
     }
     console.log('Round complete');
-
 }
-
 
 
 function incrementDraw() {
@@ -196,7 +191,6 @@ function incrementDraw() {
     let oldScore = parseInt(document.getElementById("draws").innerText);
     document.getElementById("draws").innerText = ++oldScore;
     document.getElementById("message").innerText = ("You drew using:");
-
 }
 
 /**
@@ -207,7 +201,6 @@ function incrementScore() {
     let oldScore = parseInt(document.getElementById("wins").innerText);
     document.getElementById("wins").innerText = ++oldScore;
     document.getElementById("message").innerText = ("You won using:");
-
 }
 
 /**
@@ -218,7 +211,6 @@ function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById("loses").innerText);
     document.getElementById("loses").innerText = ++oldScore;
     document.getElementById("message").innerText = ("You lost using:");
-    
 }
 
 function imageCycle(gameType , diff){

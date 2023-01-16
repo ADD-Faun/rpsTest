@@ -105,9 +105,9 @@ This was fixed by setting the undisable function to run when the alert message w
 - JavaScript
     - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
       - The following metrics were returned: 
-      - There are 24 functions in this file.
+      - There are 23 functions in this file.
       - Function with the largest signature take 2 arguments, while the median is 0.
-      - Largest function has 15 statements in it, while the median is 2.5.
+      - Largest function has 15 statements in it, while the median is 2.
       - The most complex function has a cyclomatic complexity value of 9 while the median is 1.
       - 31 warnings of "is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
 
