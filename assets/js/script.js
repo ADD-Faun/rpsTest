@@ -44,14 +44,15 @@ function selection(selected) {
 
     if (selected != "submit") {
         let gameType = selected;
+        var diff = 3;
         
         if (difficulty.checked) {
             console.log(`Checkbox is checked!`);
-                var diff = 5;
+                diff = 5;
             } 
         else {
             console.log(`Checkbox is not checked.`);
-                var diff = 3;
+                diff = 3;
             }
         
         imageCycle(gameType, diff);
@@ -236,5 +237,5 @@ function imageCycle(gameType , diff){
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.jpg"; }, 3000);
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg"; }, 4000);
 
-    runGame(gameType , diff)
+    runGame(gameType , diff);
     }

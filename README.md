@@ -68,11 +68,16 @@ and be notified of changes.
 ### Validator Testing 
 
 - HTML
-  - Image height & width has units. Units removed.
-   No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadd-faun.github.io%2FrpsTest%2F)
+   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadd-faun.github.io%2FrpsTest%2F)
 - CSS
-  - background-color none is not a background-color. Removed.
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fadd-faun.github.io%2FrpsTest%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- JavaScript
+    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+      - The following metrics were returned: 
+      - There are 24 functions in this file.
+      - Function with the largest signature take 2 arguments, while the median is 0.
+      - Largest function has 14 statements in it, while the median is 2.5.
+      - The most complex function has a cyclomatic complexity value of 9 while the median is 1.
 
 ### Unfixed Bugs
 
