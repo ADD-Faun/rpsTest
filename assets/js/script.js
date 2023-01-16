@@ -47,11 +47,11 @@ function selection(selected) {
         
         if (difficulty.checked) {
             console.log(`Checkbox is checked!`);
-                diff = 5
+                var diff = 5;
             } 
         else {
             console.log(`Checkbox is not checked.`);
-                diff = 3
+                var diff = 3;
             }
         
         imageCycle(gameType, diff);
@@ -90,8 +90,8 @@ function runGame(gameType , diff) {
 
     //if box checked let choices = all 5 things 
 
-    opponentc = choices[Math.floor(Math.random() * diff)];
-    player1 = gameType ;
+    var opponentc = choices[Math.floor(Math.random() * diff)];
+    var player1 = gameType ;
 
     document.getElementById('playeranswer').textContent = player1;
     document.getElementById('oppanswer').textContent = opponentc;
@@ -136,7 +136,7 @@ function runGame(gameType , diff) {
             } 
         }, 4500);
 
-    setTimeout(() => {checkAnswer(player1 , opponentc);; }, 6000);
+    setTimeout(() => {checkAnswer(player1 , opponentc); }, 6000);
 }
 
 /**
@@ -145,8 +145,8 @@ function runGame(gameType , diff) {
  */
 function checkAnswer(player1 , opponentc) {
 
-        ans1=0;
-        ans2=0;
+        var ans1=0;
+        var ans2=0;
 
     enableButtons();
     document.getElementById("message").innerText = ("Last turn you chose:");
