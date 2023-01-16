@@ -1,10 +1,13 @@
-
-
 # Rock Paper scissors. Lizard Spock?
 
-Rock Paper scissors. Lizard Spock? 
+'Rock Paper scissors. Lizard Spock?' is a browser based game made to capture the simple joy of the game 'Rock Paper scissors'. 
+It provides users with the oppurtunity to play against a computer in the classic game of 'Rock Paper scissors'. Users can also
+play a more advanced version called 'Rock Paper scissors' Lizard Spock. Where the additional choices of lizard or spock adds 
+a greater chance of winning or losing and reduces the chance of a draw. 
 
-Its aim for 'Rock Paper scissors. Lizard Spock?' is
+The aim for 'Rock Paper scissors. Lizard Spock?' is to entertain users for short amounts of time on bus journeys or as a break 
+from work to clear their minds. It could also be used to decide insignificant choices like who plays white first in chess, by 
+seeing who can beat the computer three times first or who gets the best score out of three
  
 
 ![Responsice Mockup](assets/images/responsiveness-readme.jpg)
@@ -61,6 +64,10 @@ Its aim for 'Rock Paper scissors. Lizard Spock?' is
 ![Basic Choices](assets/images/basic-choices-readme.png) ![All Choices](assets/images/all-choices-readme.png)
 
 ### Future Features
+
+- __visual viewport__
+    - Redirect users visual view to the top of the page when choice for game (e.g. rock)is made. Currently smaller screens
+    do not see all the animations for the game when 
 
 - __Resizing__
     - Currently fits on all screen sizes. In future will increase size on bigger screens to fill space
