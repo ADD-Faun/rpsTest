@@ -153,6 +153,7 @@ function checkAnswer(player1 , opponentc) {
         ans2=0;
 
     enableButtons();
+    document.getElementById("message").innerText = ("Last turn you chose:");
 
     switch (opponentc) {
         case "rock":
@@ -186,7 +187,7 @@ function checkAnswer(player1 , opponentc) {
                 alert(`Awwww.... you threw ${player1} . If only you'd chosen ${ans1} `);
                 incrementWrongAnswer();
             }    
-   
+
 }
 
 
@@ -195,6 +196,7 @@ function incrementDraw() {
 
     let oldScore = parseInt(document.getElementById("draws").innerText);
     document.getElementById("draws").innerText = ++oldScore;
+    document.getElementById("message").innerText = ("You drew using:");
 
 }
 
@@ -205,6 +207,7 @@ function incrementScore() {
 
     let oldScore = parseInt(document.getElementById("wins").innerText);
     document.getElementById("wins").innerText = ++oldScore;
+    document.getElementById("message").innerText = ("You won using:");
 
 }
 
@@ -215,10 +218,15 @@ function incrementWrongAnswer() {
 
     let oldScore = parseInt(document.getElementById("loses").innerText);
     document.getElementById("loses").innerText = ++oldScore;
+    document.getElementById("message").innerText = ("You lost using:");
     
 }
 
 function imageCycle(gameType , diff){
+
+    document.getElementById("message").innerText = ("You have chosen:");
+    document.getElementById("message-selection").innerText = (gameType);
+    
 
     document.getElementById("playerimage").src="assets/images/question.jpeg";
     setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.jpg";; }, 1000);

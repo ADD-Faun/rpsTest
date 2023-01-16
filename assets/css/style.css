@@ -109,9 +109,14 @@ body {
     font-weight: bold;
 }
 
-.answer-message {
-    display: none;
-    font-size: 1rem;
+#message {
+    display: inline;
+    color: black;
+}
+
+#message-selection {
+    display: inline;
+    color: black;
 }
 
 #answer-box {
