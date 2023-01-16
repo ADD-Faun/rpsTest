@@ -1,23 +1,10 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome ADD-Faun,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Rock Paper scissors. Lizard Spock?
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Rock Paper scissors. Lizard Spock? 
 
-# Widnes Climbers
-
-Widnes Climbers is a site to help people in Widnes come together and go climbing together in the surrounding area both indoors and outdoors.
-The puspose is to be simple in informing people that there is a group of people who welcome others to join them.
-
-Its aim is for climbers of Widnes to join the social medias or sign up to the newsletter if they wish.
-The site is designed to present the opurtunity to join a group that is simple and friendly.
-The site will target new and experienced climbers who would like company while they climb or just want to get into the sport and need encouragement.
-
-Widnes Climbers will explain the different types of climbing the group does and when they meet. 
-It will have a sign up newsletter with questions about what type of climbing the visitor is interested in, so they can be informed on when and where that type is 
-and be notified of changes.
+Its aim for 'Rock Paper scissors. Lizard Spock?' is
  
 
 ![Responsice Mockup](assets/images/responsiveness-readme.jpg)
@@ -78,11 +65,24 @@ and be notified of changes.
       - Function with the largest signature take 2 arguments, while the median is 0.
       - Largest function has 14 statements in it, while the median is 2.5.
       - The most complex function has a cyclomatic complexity value of 9 while the median is 1.
+      - 31 warnings of "is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
 
 ### Unfixed Bugs
 
   - Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.
   - Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received.
+
+## Deployment
+
+Rock Paper scissors. Lizard Spock? was deployed using github pages. 
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigated to the Settings tab 
+  - Navigated to the pages section under Code and automation
+  - Source chosen was deploy from branch
+  - Main branch was chosen and saved, page refreshed with a working link to indicate the successful deployment. 
+
+The live link can be found here - https://add-faun.github.io/rpsTest/
 
 **Anything more?**
 
