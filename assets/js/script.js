@@ -42,21 +42,20 @@ function enableButtons() {
 
 function selection(selected) {
 
-    if (selected != "submit") {
-        let gameType = selected;
-        var diff = 3;
+    let gameType = selected;
+    var diff = 3;
         
-        if (difficulty.checked) {
-            console.log(`Checkbox is checked!`);
-                diff = 5;
-            } 
-        else {
-            console.log(`Checkbox is not checked.`);
-                diff = 3;
-            }
+    if (difficulty.checked) {
+        console.log(`Checkbox is checked!`);
+            diff = 5;
+        } 
+    else {
+        console.log(`Checkbox is not checked.`);
+            diff = 3;
+        }
         
-        imageCycle(gameType, diff);
-    }    
+    imageCycle(gameType, diff);
+    
 }
 
 
