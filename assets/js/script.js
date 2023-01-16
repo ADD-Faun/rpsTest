@@ -2,45 +2,41 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    ready()
-    console.log('listening')
+    ready();
+    console.log('listening');
 });
 
 function ready() {
-    let buttons = document.getElementsByTagName("button")
+    let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            let selected = this.getAttribute("data-type")
+            let selected = this.getAttribute("data-type");
             selection(selected);
             disableButtons();
-        })
+        });
 }}
-            
-function test() {
-    alert("Test success");
-}
 
 /**
  * disables buttons to prevent multiple clicks running game multiple times
  */
 function disableButtons() {
-    let buttons = document.getElementsByTagName("button")
+    let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.disabled = true;
-    };
+    }
 }
 
 /**
  * enables the buttons so the game can be played again
  */
 function enableButtons() {
-    let buttons = document.getElementsByTagName("button")
+    let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.disabled = false;
-    };
+    }
 
 }
 
@@ -50,11 +46,11 @@ function selection(selected) {
         let gameType = selected;
         
         if (difficulty.checked) {
-            console.log(`Checkbox is checked!`)
+            console.log(`Checkbox is checked!`);
                 diff = 5
             } 
         else {
-            console.log(`Checkbox is not checked.`)
+            console.log(`Checkbox is not checked.`);
                 diff = 3
             }
         
@@ -103,44 +99,44 @@ function runGame(gameType , diff) {
     setTimeout(() => {  
         switch (opponentc) {
         case "rock":
-            document.getElementById("oppimage").src="assets/images/rock.jpg";;
+            document.getElementById("oppimage").src="assets/images/rock.jpg";
            break;
         case "paper":
-            document.getElementById("oppimage").src="assets/images/paper.jpg";;
+            document.getElementById("oppimage").src="assets/images/paper.jpg";
            break;
         case "scissors":
-            document.getElementById("oppimage").src="assets/images/scissors.jpg";;
+            document.getElementById("oppimage").src="assets/images/scissors.jpg";
            break;
         case "lizard":
-            document.getElementById("oppimage").src="assets/images/lizard.jpg";;
+            document.getElementById("oppimage").src="assets/images/lizard.jpg";
            break;
         case "spock":
-            document.getElementById("oppimage").src="assets/images/spock.jpg";;
+            document.getElementById("oppimage").src="assets/images/spock.jpg";
            break;
             } 
-        }, 4500);;
+        }, 4500);
 
     setTimeout(() => {  
         switch (player1) {
         case "rock":
-            document.getElementById("playerimage").src="assets/images/rock.jpg";;
+            document.getElementById("playerimage").src="assets/images/rock.jpg";
            break;
         case "paper":
-            document.getElementById("playerimage").src="assets/images/paper.jpg";;
+            document.getElementById("playerimage").src="assets/images/paper.jpg";
            break;
         case "scissors":
-            document.getElementById("playerimage").src="assets/images/scissors.jpg";;
+            document.getElementById("playerimage").src="assets/images/scissors.jpg";
            break;
         case "lizard":
-            document.getElementById("playerimage").src="assets/images/lizard.jpg";;
+            document.getElementById("playerimage").src="assets/images/lizard.jpg";
            break;
         case "spock":
-            document.getElementById("playerimage").src="assets/images/spock.jpg";;
+            document.getElementById("playerimage").src="assets/images/spock.jpg";
            break;
             } 
-        }, 4500);;
+        }, 4500);
 
-    setTimeout(() => {checkAnswer(player1 , opponentc);; }, 6000);;
+    setTimeout(() => {checkAnswer(player1 , opponentc);; }, 6000);
 }
 
 /**
@@ -160,16 +156,16 @@ function checkAnswer(player1 , opponentc) {
             ans1="paper"; ans2="spock";
             break;
         case "paper":
-            ans1="scissors"; ans2="lizard"
+            ans1="scissors"; ans2="lizard";
             break;
         case "scissors":
-            ans1="rock"; ans2="spock"
+            ans1="rock"; ans2="spock";
             break;
         case "spock":
-            ans1="paper"; ans2="lizard"
+            ans1="paper"; ans2="lizard";
             break;
         case "lizard":
-            ans1="rock"; ans2="scissors"
+            ans1="rock"; ans2="scissors";
             break;
     }
 
@@ -229,16 +225,16 @@ function imageCycle(gameType , diff){
     
 
     document.getElementById("playerimage").src="assets/images/question.jpeg";
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.jpg";; }, 1000);
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/paper.jpg";; }, 2000);
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/scissors.jpg";; }, 3000);
-    setTimeout(() => { document.getElementById("playerimage").src="assets/images/question.jpeg";; }, 4000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.jpg"; }, 1000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/paper.jpg"; }, 2000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/scissors.jpg"; }, 3000);
+    setTimeout(() => { document.getElementById("playerimage").src="assets/images/question.jpeg"; }, 4000);
 
     document.getElementById("oppimage").src="assets/images/question.jpeg";
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/rock.jpg";; }, 1000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.jpg";; }, 2000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.jpg";; }, 3000);
-    setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg";; }, 4000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/rock.jpg"; }, 1000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.jpg"; }, 2000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.jpg"; }, 3000);
+    setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg"; }, 4000);
 
     runGame(gameType , diff)
     }
