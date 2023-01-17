@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     ready();
     options();
     console.log('Ready');
-});
+    }
+);
 
 /**
  * Sets event listener for the buttons for player choices
