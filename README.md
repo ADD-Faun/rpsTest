@@ -91,10 +91,14 @@ All clickable items work at different screen sizes and on different devices.
   - Each choice button works and produces the correct response.
 
 Users were able to click buttons repeatedly causing the game to run several times at the same time.
-This was fixed by having the on click function also disable all the buttons. 
+  - This was fixed by having the on click function also disable all the buttons. 
 
 Buttons did not become undisabled for the next turn.
-This was fixed by setting the undisable function to run when the alert message was shown.
+  - This was fixed by setting the undisable function to run when the alert message was shown.
+
+Console error: /favicon.ico:1 Failed to load resource: the server responded with a status of 404 ()
+  - This was ixed by setting the page logo as the favicon
+
 
 ### Validator Testing 
 
@@ -105,16 +109,21 @@ This was fixed by setting the undisable function to run when the alert message w
 - JavaScript
     - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
       - The following metrics were returned: 
-      - There are 23 functions in this file.
+      - There are 24 functions in this file.
       - Function with the largest signature take 2 arguments, while the median is 0.
-      - Largest function has 15 statements in it, while the median is 2.
+      - Largest function has 13 statements in it, while the median is 3.
       - The most complex function has a cyclomatic complexity value of 9 while the median is 1.
-      - 31 warnings of "is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
+      - 30 warnings of "is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
 
 ### Unfixed Bugs
 
-  - Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.
-  - Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received.
+  - Console error: Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.
+  This is due to a chrome update intended to stop auto play of videos/audio.
+  I believed it could be because of my 'document.addEventListener("DOMContentLoaded", function' used to add event listeners for buttons.
+  but removing it and making the page not work still did not resovle the issue.
+
+  - Console error: Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received. 
+
 
 ------
 
