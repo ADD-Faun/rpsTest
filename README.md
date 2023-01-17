@@ -117,13 +117,14 @@ Console error: /favicon.ico:1 Failed to load resource: the server responded with
 
 ### Unfixed Bugs
 
+- These console errors only occur in chrome & edge
+
   - Console error: Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.
-  This is due to a chrome update intended to stop auto play of videos/audio.
+  I believe this is due to a chrome update intended to stop auto play of videos/audio.
   I believed it could be because of my 'document.addEventListener("DOMContentLoaded", function' used to add event listeners for buttons.
   but removing it and making the page not work still did not resovle the issue.
 
   - Console error: Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received. 
-
 
 ------
 
