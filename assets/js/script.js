@@ -41,13 +41,17 @@ function enableButtons() {
 }
 
 /**
- * defines parameters for computer choices and stops further user input
- * then begins game loop
+ * confirms player choice and stops further user input
+ * then defines parameters for computer choices and begins game loop
+ * changes message to player confirming their choice
  */
 function selection() {
     disableButtons();
-    let gameType = this.getAttribute("data-type");
-    console.log(gameType)
+    let player1 = this.getAttribute("data-type");
+    console.log(player1);
+
+    document.getElementById("message").innerText = ("You have chosen:");
+    document.getElementById("message-selection").innerText = (player1);
 
     var diff = 3;
         
@@ -60,7 +64,7 @@ function selection() {
             diff = 3;
         }
         
-    imageCycle(gameType, diff);
+    runGame(player1, diff);
 }
 
 /**
@@ -87,19 +91,20 @@ function options() {
 }
 
 /**
- * The main game "loop", called when the script is first loaded
- * and after the user's answer has been processed
+ * Takes players choice & randomly selects computers choice 
+ * sets image for choices to be displayed at end of turn
+ * starts imageCycle & checkAnswer functions
  */
-function runGame(gameType, diff) {
+function runGame(player1, diff) {
+    imageCycle();
 
 	// Creates computers choice
 
     var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-    //if box checked let choices = all 5 things 
+    // diff is the number of choices player or comp can choose from
 
     var opponentc = choices[Math.floor(Math.random() * diff)];
-    var player1 = gameType;
 
     document.getElementById('playeranswer').textContent = player1;
     document.getElementById('oppanswer').textContent = opponentc;
@@ -144,7 +149,7 @@ function runGame(gameType, diff) {
             } 
         }, 4500);
 
-    setTimeout(() => {checkAnswer(player1 , opponentc); }, 6000);
+    setTimeout(() => {checkAnswer(player1 , opponentc); }, 5500);
 }
 
 /**
@@ -153,8 +158,8 @@ function runGame(gameType, diff) {
  */
 function checkAnswer(player1, opponentc) {
 
-    var ans1=0;
-    var ans2=0;
+    var ans1 = 0;
+    var ans2 = 0;
 
     enableButtons();
     document.getElementById("message").innerText = ("Last turn you chose:");
@@ -196,7 +201,9 @@ function checkAnswer(player1, opponentc) {
     console.log('Round complete');
 }
 
-
+/**
+ * Gets the current tally of draws from the DOM and increments it by 1
+ */
 function incrementDraw() {
 
     let oldScore = parseInt(document.getElementById("draws").innerText);
@@ -224,11 +231,10 @@ function incrementWrongAnswer() {
     document.getElementById("message").innerText = ("You lost using:");
 }
 
-function imageCycle(gameType,diff) {
-
-    document.getElementById("message").innerText = ("You have chosen:");
-    document.getElementById("message-selection").innerText = (gameType);
-    
+/**
+ * Cycles through images like a roulet 
+ */
+function imageCycle() {
 
     document.getElementById("playerimage").src="assets/images/question.jpeg";
     setTimeout(() => { document.getElementById("playerimage").src="assets/images/rock.jpg"; }, 1000);
@@ -241,6 +247,4 @@ function imageCycle(gameType,diff) {
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/paper.jpg"; }, 2000);
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/scissors.jpg"; }, 3000);
     setTimeout(() => { document.getElementById("oppimage").src="assets/images/question.jpeg"; }, 4000);
-
-    runGame(gameType, diff)
 }
