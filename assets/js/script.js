@@ -106,9 +106,6 @@ function runGame(player1, diff) {
     // diff is the number of choices player or comp can choose from
 
     var opponentc = choices[Math.floor(Math.random() * diff)];
-
-    document.getElementById('playeranswer').textContent = player1;
-    document.getElementById('oppanswer').textContent = opponentc;
     
     setTimeout(() => {  
         switch (opponentc) {
@@ -167,25 +164,21 @@ function checkAnswer(player1, opponentc) {
 
     switch (opponentc) {
         case "rock":
-            ans1="paper"; ans2="spock";
+            ans1 = "paper"; ans2 = "spock";
             break;
         case "paper":
-            ans1="scissors"; ans2="lizard";
+            ans1 = "scissors"; ans2 = "lizard";
             break;
         case "scissors":
-            ans1="rock"; ans2="spock";
+            ans1 = "rock"; ans2 = "spock";
             break;
         case "spock":
-            ans1="paper"; ans2="lizard";
+            ans1 = "paper"; ans2 = "lizard";
             break;
         case "lizard":
-            ans1="rock"; ans2="scissors";
+            ans1 = "rock"; ans2 = "scissors";
             break;
     }
-
-    // changes hidden text to show if working 
-    document.getElementById('ans1').textContent = ans1;
-    document.getElementById('ans2').textContent = ans2;
 
     if (player1 == ans1 || player1 == ans2) {
         alert("You Won :D");
